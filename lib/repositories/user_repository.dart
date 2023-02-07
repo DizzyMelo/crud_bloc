@@ -24,7 +24,7 @@ class UserRepository {
               path: "app/data-bjiti/endpoint/data/v1/action/find"),
           body: json.encode(defaultBody),
           headers: {"Content-Type": "application/json", "api-key": apiKey});
-      Iterable userList = json.decode(response.body)["documentss"];
+      Iterable userList = json.decode(response.body)["documents"];
       List<User> users = userList.map((user) => User.fromJson(user)).toList();
       return users;
     } catch (e) {
