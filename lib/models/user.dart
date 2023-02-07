@@ -11,7 +11,7 @@ class User {
       required this.email});
 
   User.fromJson(Map json)
-      : id = json["_id"]["\$oid"],
+      : id = json["_id"],
         firstName = json["first_name"],
         surname = json["surname"],
         email = json["email"];
